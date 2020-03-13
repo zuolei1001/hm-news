@@ -1,10 +1,20 @@
-import Vue from 'vue'
-import App from './App.vue'
-import router from './router'
+import Vue from 'vue';
+import App from './App.vue';
+import './styles/base.less';
+import './styles/iconfont.less';
+import 'lib-flexible';
+import router from './router';
 
-Vue.config.productionTip = false
+import HmHeader from './components/HmHeader';
+import HmLogo from './components/HmLogo';
+import HmButton from './components/HmButton.vue';
+Vue.component('hm-header', HmHeader);
+Vue.component('hm-logo', HmLogo);
+Vue.component('hm-button', HmButton);
+
+Vue.config.productionTip = false;
 
 new Vue({
   router,
   render: h => h(App)
-}).$mount('#app')
+}).$mount('#app');
